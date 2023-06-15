@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Create a folder on all node
+      file:
+        path: /home/ram/Desktop/new
+        state: directory
+
+    - name: Copy a file on all node
+      copy:
+        src: /root/module/linemodule.txt
+        dest: /home/ram/Desktop/new/
+...

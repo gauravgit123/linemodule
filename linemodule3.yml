@@ -1,0 +1,10 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Replace a line on all node
+      lineinfile:
+        path: /home/ram/Desktop/new/linemodule.txt
+        regexp: '^ONLINE' 
+        line: ONLINE=This my first commit
+...

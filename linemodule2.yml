@@ -1,0 +1,11 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Edit a file on all node
+      lineinfile:
+        path: /home/ram/Desktop/new/linemodule.txt
+        regexp: '^online'
+        line: online=This is my thrid commit
+        state: present
+...
